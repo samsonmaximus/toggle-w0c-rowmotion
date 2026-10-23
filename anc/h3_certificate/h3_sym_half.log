@@ -1,0 +1,7 @@
+step 1: terms F 64 G 27 t=0s
+step 2: terms F 471 G 381 t=1s
+step 3: terms F 2325 G 1489 t=12s
+step 4: terms F 10782 G 3417 t=179s
+step 5: terms F 11247 G 11247 t=729s
+Row^5 == Row^-5 (hence Row^10 = id): True
+Row^5 == id: False

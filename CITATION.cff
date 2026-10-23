@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the preprint."
+title: "Toggling in w0(c) root order is conjugate to rowmotion: resolution of AIM Conjecture 3.2 and Thomas's conjecture"
+type: article
+authors:
+  - family-names: Fraser
+    given-names: Samson
+    email: samsonmfraser@gmail.com
+license: CC-BY-4.0
+date-released: 2026-10-23
+keywords:
+  - AIM Conjecture 3.2
+  - Thomas conjecture
+  - rowmotion
+  - toggles
+  - birational rowmotion
+  - Kreweras complement
+  - Coxeter groups
+  - root posets
+# After the Zenodo record is published, uncomment and fill in the concept DOI:
+# doi: 10.5281/zenodo.XXXXXXX
