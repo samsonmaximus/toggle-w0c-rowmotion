@@ -1,0 +1,13 @@
+# LaTeX build files
+*.aux
+*.log
+!anc/**/*.log
+*.out
+*.toc
+*.synctex.gz
+# compiled checkers
+anc/code/fastcheck
+anc/code/squares
+anc/code/omega
+*.exe
+__pycache__/

@@ -21,13 +21,13 @@
 \title[Toggling in $w_0(c)$ root order]{Toggling in \texorpdfstring{$w_0(c)$}{w0(c)} root order is conjugate to rowmotion:\\ resolution of AIM Conjecture 3.2 and Thomas's conjecture}
 \author{Samson Fraser}
 \email{samsonmfraser@gmail.com}
-\date{October 2026}
+\date{29 October 2026}
 \begin{document}
 
 \begin{abstract}
 Toggling is a simple operation on a partially ordered set: it adds an element to a downward-closed subset, or removes one, whenever the result is still downward closed. Toggling every element in turn, from the top down, gives rowmotion, a map studied since the 1970s. Toggles also act on numerical labels, where they become rational maps, and there it is hard to tell whether a product of toggles ever returns to where it started. Even for rowmotion, this is known only for special posets.
 
-In 2015, the problem list of the American Institute of Mathematics workshop on Dynamical Algebraic Combinatorics conjectured that one such product has order $2h$ on the root posets of types $A$, $B$, $H_3$ and $I_2(m)$, where $h$ is the Coxeter number. This product toggles the positive roots in an order determined by a Coxeter element. We resolve the conjecture. We prove that the product is conjugate to rowmotion in every finite crystallographic type and in types $H_3$ (for an explicit labelling of its roots) and $I_2(m)$; this also proves a 2013 conjecture of H.~Thomas. In the four types of the conjecture, it follows that the product returns to the identity after $2h$ steps. Its exact order is $2h$ in types $A_n$ ($n\ge2$) and $I_2(m)$ with $m$ odd, but only $h$ in types $B_n$, $H_3$ and $I_2(m)$ with $m$ even. The exceptional types and $H_3$ rely on exact computer calculations.
+In 2015, the problem list of the American Institute of Mathematics workshop on Dynamical Algebraic Combinatorics conjectured that one such product has order $2h$ on the root posets of types $A$, $B$, $H_3$ and $I_2(m)$, where $h$ is the Coxeter number. This product toggles the positive roots in an order determined by a Coxeter element. We resolve the conjecture. We prove that the product is conjugate to rowmotion in every finite crystallographic type and in types $H_3$ (for an explicit labelling of its roots) and $I_2(m)$; this also proves a 2013 conjecture of H.~Thomas. As a consequence, in every finite Weyl group the combinatorial version of the product has the same orbit structure as the Kreweras complement on noncrossing partitions. In the four types of the conjecture, it follows that the product returns to the identity after $2h$ steps. Its exact order is $2h$ in types $A_n$ ($n\ge2$) and $I_2(m)$ with $m$ odd, but only $h$ in types $B_n$, $H_3$ and $I_2(m)$ with $m$ even. The only new computer calculations are in type $H_3$, and they are exact.
 \end{abstract}
 \maketitle
 
@@ -42,13 +42,14 @@ The most studied element of the toggle group is \emph{rowmotion}: toggling every
 \item its $h$-th power is the involution induced by $-w_0$;
 \item along every orbit, the average size of an antichain is $n/2$.
 \end{itemize}
-Armstrong, Stump and Thomas~\cite[Thm.~1.2]{AST} proved these conjectures by constructing a bijection, uniform in its definition, that carries rowmotion on antichains (nonnesting partitions) to the Kreweras complement on noncrossing partitions.
+Armstrong, Stump and Thomas~\cite[Thm.~1.2]{AST} proved these conjectures by constructing a bijection, uniform in its definition, that carries rowmotion on antichains (nonnesting partitions) to the Kreweras complement on noncrossing partitions. They prove the first in the form $\Row^{2h}=\mathrm{id}$; together with an orbit of size $h$ formed by the rank levels, observed by Panyushev, this gives the exact order.
 
 Einstein and Propp~\cite{EP} lifted toggles to the \emph{piecewise-linear} and \emph{birational} settings, in which a toggle becomes a rational map on labellings of $P$ (Section~\ref{sec:prelim}). Periodicity is much more delicate there. Grinberg and Roby~\cite{GR1,GR2} proved that birational rowmotion is periodic on products of two chains and on several triangles. They also showed that it can have infinite order, already on small graded posets such as the Boolean lattice $[2]^3$~\cite[\S20]{GR1}, and they report that it has infinite order on the root poset of type $D_4$~\cite[\S21]{GR1}. Musiker and Roby~\cite{MR} gave a lattice-path formula for its iterates on products of two chains. Okada~\cite{Oka} proved periodicity on all minuscule posets, and Johnson and Liu~\cite{JL} proved it on trapezoids, resolving a conjecture of Williams.
 
 \subsection{Kreweras complements in the toggle group}
-In his thesis~\cite[\S4.4.1]{Wil}, Williams records an observation of H.~Thomas. In type $A_n$, one of the toggle orders of Striker and Williams~\cite{SW} is the order of the roots given by the $c$-sorting word of $w_0$. Thomas proposed a model of the Kreweras complement inside the toggle group of the root poset~\cite[Def.~4.4.4]{Wil}, as follows. Fix a Coxeter element $c$, and let $\beta_1,\dots,\beta_N$ be the inversion sequence of the $c$-sorting word $w_0(c)$ of the longest element (Section~\ref{sec:prelim}). Toggling the elements of $\Phi^+$ in this order defines Thomas's \emph{nonnesting $c$-Kreweras complement}\footnote{This is a map on order ideals of $\Phi^+$, not the Kreweras complement $w\mapsto cw^{-1}$ on noncrossing partitions used in~\cite{AST}; this is why it is renamed $\mathrm{Krow}_c$ in~\cite{DFISTW}.}
-\[\mathrm{Krew}_c=\Tog_{\beta_1\beta_2\cdots\beta_N}.\]
+In his thesis~\cite[\S4.4.1]{Wil}, Williams records an observation of H.~Thomas. In type $A_n$, one of the toggle orders of Striker and Williams~\cite{SW} is the order of the roots given by the $c$-sorting word of $w_0$. Thomas proposed a model of the Kreweras complement inside the toggle group of the root poset~\cite[Def.~4.4.4]{Wil}, as follows. Fix a Coxeter element $c$, and let $\beta_1,\dots,\beta_N$ be the inversion sequence of the $c$-sorting word $w_0(c)$ of the longest element (Section~\ref{sec:prelim}). Toggling the elements of $\Phi^+$ in this order defines Thomas's \emph{nonnesting $c$-Kreweras complement}\footnote{This is a map on order ideals of $\Phi^+$, not the Kreweras complement $w\mapsto cw^{-1}$ on noncrossing partitions used in~\cite{AST}.}
+\[\mathrm{Krew}_c=\Tog_{\beta_1\beta_2\cdots\beta_N}=t_{\beta_N}\circ\cdots\circ t_{\beta_2}\circ t_{\beta_1},\]
+so that $\beta_1$ is toggled first (Section~\ref{sec:prelim}).
 Thomas conjectured that these maps are all conjugate to rowmotion:
 
 \begin{conjecture}[Thomas; {\cite[Conj.~4.4.5]{Wil}}]\label{conj:thomas}
@@ -68,7 +69,7 @@ Birational toggles in $w_0(c)$ root orders appear to continue to have order $2h$
 
 Two features make this harder than the corresponding statement for rowmotion.
 
-First, an inversion order of $w_0$ is in general not a linear extension of the root poset, so $K_c$ is not rowmotion, and the known periodicity results do not apply to it directly. The toggle order matters a great deal. On the four-element poset $[2]\times[2]$, rowmotion has order $4$, but $T_{(1,1)}\circ T_{(1,2)}\circ T_{(2,2)}\circ T_{(2,1)}$ has infinite order~\cite[Ex.~2.15]{GR1}, \cite{EP}.
+First, an inversion order of $w_0$ is in general not a linear extension of the root poset, so $K_c$ is not rowmotion, and the known periodicity results do not apply to it directly. The toggle order matters a great deal. On the four-element poset $[2]\times[2]$, birational rowmotion has order $4$, but birational toggling in the order $(2,1),(2,2),(1,2),(1,1)$ gives a map of infinite order~\cite[Ex.~2.15]{GR1}, \cite{EP} (see Example~\ref{ex:square}).
 
 Second, ``has order $2h$'' admits two readings: that $2h$ is the exact order, or that $2h$ is a period, i.e.\ $K_c^{2h}=\mathrm{id}$. The two readings already differ in rank two. The second is the form in which Armstrong, Stump and Thomas~\cite{AST} state Panyushev's conjecture. It is also the form of Hopkins' conjecture~\cite[Conj.~4.40]{Hop} that birational rowmotion on a coincidental root poset has order dividing $2h$. Panyushev's own formulation~\cite[Conj.~2.1]{Pan} specifies the exact order: $h$ if $w_0=-1$, and $2h$ otherwise.
 
@@ -95,6 +96,14 @@ Thus Conjecture~3.2 holds when ``order $2h$'' is read as a period. Read literall
 
 Theorem~\ref{thm:conj} also explains the parenthetical remark in~\cite{AIM}. In type $D_4$ the map $K_c$ is conjugate to birational rowmotion, so the two maps have the same order, and by~\cite[\S21]{GR1} that order is infinite.
 
+For combinatorial toggles, Theorem~\ref{thm:conj} has a consequence that is close to the type~$A$ (and, by folding, type~$C$) results of~\cite{DFISTW}, and holds in every finite Weyl group.
+
+\begin{corollary}\label{cor:krew}
+Let $W$ be an irreducible finite Weyl group and $c$ a Coxeter element. Then $\mathrm{Krew}_c$, acting on the order ideals of $\Phi^+$ (which are in bijection with the nonnesting partitions of $W$), has the same orbit structure as rowmotion, and hence as the Kreweras complement on the noncrossing partitions $NC(W,c')$ for any Coxeter element $c'$. In particular, $\mathrm{Krew}_c$ has order $h$ if $w_0=-1$ and $2h$ otherwise. Moreover, there is an explicit bijection from $NC(W,c')$ to the order ideals of $\Phi^+$ that carries the Kreweras complement to $\mathrm{Krew}_c$.
+\end{corollary}
+
+In types $A$ and $C$, the equivariant bijections of~\cite{DFISTW} recalled above are direct. The bijection of Corollary~\ref{cor:krew} exists in every type but is less direct: it composes the uniform bijection of Armstrong, Stump and Thomas~\cite{AST}, whose well-definedness is proved case by case (by computer in the exceptional types), with the product of toggles that conjugates rowmotion to $\mathrm{Krew}_c$. A direct bijection in every type would be desirable (Section~\ref{sec:remarks}).
+
 \subsection{Method}
 A toggle order induces an acyclic orientation of the Hasse diagram, and reversing all edges at a source (a \emph{source-to-sink move}) amounts to conjugating by a single toggle. This principle goes back to the study of conjugacy of Coxeter elements~\cite{Shi,EE,MM}, and it is stated for toggle groups in~\cite[\S3]{EFGJMPR} (see also~\cite{DMR}). By a theorem of Pretzel~\cite{Pretzel}, two acyclic orientations are related by source-to-sink moves if and only if they have the same circulation around every cycle.
 
@@ -103,7 +112,21 @@ So it suffices to show that the orientation induced by $w_0(c)$ has circulation 
 \item Dyer's theory of reflection orders~\cite{Dyer} reduces the orientation of a cover $\gamma\lessdot\gamma+\alpha_s$ to the relative position of $\gamma$ and $\alpha_s$;
 \item a compatibility property of Reading and Speyer~\cite{RS} expresses that position through the sign of a skew-symmetric form $\Omega_c$ (Section~\ref{sec:edges}).
 \end{itemize}
-Zero circulation then follows from a parallelism property of the small squares in the root poset, together with the fact that these squares generate all cycles (Sections~\ref{sec:squares} and~\ref{sec:all}). The exceptional types $E$, $F$, $G$ and the noncrystallographic type $H_3$ are finite checks (Sections~\ref{sec:all} and~\ref{sec:H3}). The orders are deduced in Section~\ref{sec:orders}.
+Once the orientation of every edge is known, we check zero circulation on the small squares of the root poset, where opposite edges turn out to be parallel (Lemma~\ref{lem:square}), and show that these squares generate all cycles. In the simply laced types $A$, $D$ and $E$ this comes from a short local argument: two upper covers of a root always have a common upper cover (Lemmas~\ref{lem:sl} and~\ref{lem:diamond}). Types $B_n$ and $C_n$ are handled through a planar grid model of the root poset, and type $F_4$ is a short hand check using Lemma~\ref{lem:diamond}. Table~\ref{tab:outline} shows where each type is proved. Only the noncrystallographic type $H_3$ needs a computer. The orders are deduced in Section~\ref{sec:orders}.
+
+\begin{table}[h]\centering\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{llll}
+Type & Orientation of each edge & Circulation $0$ on squares & Squares span all cycles\\\hline
+$A_n$, $D_n$, $E_6$, $E_7$, $E_8$ & Lemmas~\ref{lem:rule}, \ref{lem:nonzero} & Lemmas~\ref{lem:square}, \ref{lem:sl} & Corollary~\ref{cor:slspan}\\
+$B_n$ & Lemmas~\ref{lem:rule}, \ref{lem:nonzero} & Lemma~\ref{lem:square} & Lemma~\ref{lem:grid}\\
+$C_n$ & Lemma~\ref{lem:rule} & Lemma~\ref{lem:square} & as in Lemma~\ref{lem:grid}\\
+$F_4$ & Lemma~\ref{lem:rule} & Lemma~\ref{lem:square} & Lemma~\ref{lem:diamond}\\
+$G_2$, $I_2(m)$ & \multicolumn{3}{l}{the Hasse diagram is a tree, so there is nothing to check}\\
+$H_3$ & \multicolumn{3}{l}{computer: circulation $0$ on a cycle basis (Section~\ref{sec:H3})}\\
+\end{tabular}
+\caption{Where the conjugacy $K_c\sim\Row$ is proved, type by type. Types $C_n$ and $F_4$ are completed in the proof of Theorem~\ref{thm:thomas}, which also treats their squares with adjacent indices. In every type the conjugacy then follows from Corollary~\ref{cor:pot}.}\label{tab:outline}
+\end{table}
 
 \section{Preliminaries}\label{sec:prelim}
 
@@ -241,7 +264,7 @@ Write $\gamma=\sum_t\gamma_t\alpha_t$ and $t\sim s$ for adjacency in the Dynkin 
 \end{equation}
 In Example~\ref{ex:A3}, with $(\alpha_i,\alpha_i)=2$, we get $\Omega_c(\alpha_1,\alpha_2)=\Omega_c(\alpha_2,\alpha_3)=1$. So the edge $\alpha_1\lessdot\alpha_1+\alpha_2$ points up and the edge $\alpha_2\lessdot\alpha_1+\alpha_2$ points down, as in Figure~\ref{fig:A3}.
 
-Whenever Lemma~\ref{lem:rule} applies to every cover, the orientation, and hence $K_c$, depends only on $c$ and not on the reduced word chosen for it. In types $F_4$, $G_2$ and $H_3$ we checked all reduced words directly.
+Whenever Lemma~\ref{lem:rule} applies to every cover, the orientation, and hence $K_c$, depends only on $c$ and not on the reduced word chosen for it. In types $G_2$ and $H_3$ we checked all reduced words directly.
 
 \begin{lemma}\label{lem:nonzero}
 $\Omega_c(\gamma,\alpha_s)\ne0$ for every cover $\gamma\lessdot\gamma+\alpha_s$ in types $A_n$, $B_n$, $D_n$ and $E_n$.
@@ -267,34 +290,60 @@ Suppose that $s$ and $t$ are not adjacent in the Dynkin diagram, and that $\Omeg
 Since $\Omega_c(\alpha_t,\alpha_s)=0$, we have $\Omega_c(\gamma+\alpha_t,\alpha_s)=\Omega_c(\gamma,\alpha_s)$. By Lemma~\ref{lem:rule} the two $s$-edges are therefore both oriented upward or both downward, and likewise the two $t$-edges. Going around the square, the two $s$-edges are traversed in opposite directions, and so are the two $t$-edges, so the circulation is $0$.
 \end{proof}
 
-In simply laced types, no square has adjacent $s$ and $t$. Indeed, suppose $s\sim t$, so that $(\alpha_s,\alpha_t)=-1$. Since $\gamma\lessdot\gamma+\alpha_t$, the proof of Lemma~\ref{lem:nonzero} gives $(\gamma,\alpha_t)=-1$. Hence $(\gamma+\alpha_s,\alpha_t)=-2$, and
-\[\|\gamma+\alpha_s+\alpha_t\|^2=\|\gamma+\alpha_s\|^2+2(\gamma+\alpha_s,\alpha_t)+\|\alpha_t\|^2=2-4+2=0,\]
-which is impossible for a root. In type $B_n$, the list of covers in the proof of Lemma~\ref{lem:nonzero} shows that every square has one of the forms
-\[(e_i-e_j;\ i-1,\,j),\quad (e_i-e_n;\ i-1,\,n),\quad (e_i;\ i-1,\,n),\quad (e_i+e_j;\ i-1,\,j-1)\ \ (j-1>i),\]
-and in each, $s$ and $t$ are non-adjacent.
+We now show that the squares generate all cycles. In simply laced types this follows from a local property of the root poset.
 
-\begin{lemma}\label{lem:grid}
-In types $A_n$ and $B_n$, the squares span the cycle space of $\Hasse(\Phi^+)$.
+\begin{lemma}\label{lem:sl}
+Let $W$ be simply laced, and let $\gamma\in\Phi^+$ have two distinct upper covers $\gamma+\alpha_s$ and $\gamma+\alpha_t$. Then $s$ and $t$ are not adjacent in the Dynkin diagram, and $\gamma+\alpha_s+\alpha_t\in\Phi^+$.
 \end{lemma}
 
 \begin{proof}
-We embed $\Phi^+$ in the lattice $\mathbb Z^2$.
+Normalise $(\alpha,\alpha)=2$ for all roots. As in the proof of Lemma~\ref{lem:nonzero}, $(\gamma,\alpha_s)=(\gamma,\alpha_t)=-1$. Hence $(\gamma+\alpha_s,\alpha_t)=-1+(\alpha_s,\alpha_t)$, where $(\alpha_s,\alpha_t)$ is $-1$ if $s$ and $t$ are adjacent and $0$ otherwise. Two roots of norm $2$ have inner product $-2$ only if they are negatives of each other, and $\gamma+\alpha_s\neq-\alpha_t$ because $\gamma+\alpha_s$ is positive. So $s$ and $t$ are not adjacent and $(\gamma+\alpha_s,\alpha_t)=-1$. The reflection in $\alpha_t$ therefore sends $\gamma+\alpha_s$ to $\gamma+\alpha_s+\alpha_t$, which is a positive root.
+\end{proof}
 
-\emph{Type $A_n$.} Send $\alpha_i+\dots+\alpha_j$ to $(i,j)$. The image is the staircase $\Sigma_A=\{(i,j):1\le i\le j\le n\}$. The covers, which add $\alpha_{i-1}$ or $\alpha_{j+1}$, become exactly the unit steps $(i,j)\to(i-1,j)$ and $(i,j)\to(i,j+1)$ inside $\Sigma_A$.
+In particular, no square of a simply laced root poset has adjacent $s$ and $t$, since in a square $(\gamma;\,s,t)$ the root $\gamma$ has the two upper covers $\gamma+\alpha_s$ and $\gamma+\alpha_t$.
 
-\emph{Type $B_n$.} Send $e_i-e_j\mapsto(i,j)$, $e_i\mapsto(i,n+1)$ and $e_i+e_j\mapsto(i,2n+2-j)$. The image is $\Sigma_B=\{(i,p):1\le i\le n,\ i+1\le p\le 2n+1-i\}$, and each family of covers in the proof of Lemma~\ref{lem:nonzero} becomes a unit step inside $\Sigma_B$. Conversely, every unit step between two points of $\Sigma_B$ arises this way. A step $(i,p)\to(i-1,p)$ adds $\alpha_{i-1}$. A step $(i,p)\to(i,p+1)$ adds a simple root that depends only on $p$: it is $\alpha_p$ for $p<n$, $\alpha_n$ for $p\in\{n,n+1\}$, and $\alpha_{2n+1-p}$ for $p\ge n+2$.
+The next lemma is a standard argument in the spirit of Newman's diamond lemma. For a saturated chain $C=(u_0\lessdot u_1\lessdot\dots\lessdot u_k)$ of a poset $P$, write $[C]=\sum_{i}[u_{i-1},u_i]$ for the corresponding $1$-chain of $\Hasse(P)$, with each edge oriented upward.
 
-In both cases $\Hasse(\Phi^+)$ is thereby identified with the \emph{induced} grid graph on $\Sigma$, whose edges are all unit steps between points of $\Sigma$. A unit square of the lattice has all four corners in $\Sigma$ if and only if it is the image of a square of $\Phi^+$. Each region $\Sigma$ is connected and both row-convex and column-convex.
+\begin{lemma}\label{lem:diamond}
+Let $P$ be a finite poset with a unique maximal element $\hat m$. Suppose that whenever an element $u$ has two distinct upper covers $v$ and $v'$, some element $w$ covers both $v$ and $v'$. Then the cycle space of $\Hasse(P)$ over $\mathbb Z$ is spanned by the $4$-cycles $u - v - w - v' - u$ with $u\lessdot v\lessdot w$, $u\lessdot v'\lessdot w$ and $v\neq v'$.
+\end{lemma}
 
-Consider the plane drawing of this graph. We claim that every bounded face is a unit square. Suppose that a bounded face $F$ contains two adjacent open unit cells. The unit segment between them is not an edge of the graph, so at least one of its endpoints $q$ is not in $\Sigma$. This lattice point lies on no edge, so it belongs to $F$. Since $F$ is bounded, each horizontal ray from $q$ leaves $F$, so it meets the boundary of $F$. That boundary consists of edges between points of $\Sigma$, and it meets the horizontal line through $q$ only at points of $\Sigma$. So $\Sigma$ contains points on both sides of $q$ in its row, and row-convexity forces $q\in\Sigma$, a contradiction. Hence every bounded face is a single unit cell, whose boundary is the image of a square of $\Phi^+$. For a connected plane graph, the boundaries of the bounded faces span the cycle space, which proves the lemma.
+\begin{proof}
+Let $D$ be the span of these $4$-cycles. Every element lies below $\hat m$, so saturated chains from any $u$ to $\hat m$ exist. We first show, by downward induction on $u$, that $[C]-[C']\in D$ for any two saturated chains $C,C'$ from $u$ to $\hat m$. This is clear for $u=\hat m$. Otherwise let $v$ and $v'$ be the second elements of $C$ and $C'$. If $v=v'$, apply the induction hypothesis at $v$. If $v\neq v'$, choose $w$ covering $v$ and $v'$, and a saturated chain $E$ from $w$ to $\hat m$. By the induction hypothesis at $v$ and at $v'$, $[C]$ and $[C']$ are congruent modulo $D$ to the $1$-chains of $u\lessdot v\lessdot w$ followed by $E$ and of $u\lessdot v'\lessdot w$ followed by $E$. These differ by the $4$-cycle on $u,v,w,v'$, which lies in $D$.
+
+Now fix, for each $u\neq\hat m$, an upper cover $p(u)$. The edges $\{u,p(u)\}$ form a spanning tree $\mathcal T$ of $\Hasse(P)$: they are distinct, since $u$ is the lower endpoint of $\{u,p(u)\}$, so there are $|P|-1$ of them, and they connect every element to $\hat m$. Let $C_u$ be the saturated chain $u\lessdot p(u)\lessdot p(p(u))\lessdot\cdots\lessdot\hat m$. For an edge $u\lessdot v$ not in $\mathcal T$, its fundamental cycle with respect to $\mathcal T$ is $[u,v]+[C_v]-[C_u]$. This is the difference of the $1$-chains of two saturated chains from $u$ to $\hat m$, so it lies in $D$. The fundamental cycles form a basis of the cycle space.
+\end{proof}
+
+\begin{corollary}\label{cor:slspan}
+Let $W$ be irreducible and simply laced. Then the squares span the cycle space of $\Hasse(\Phi^+)$.
+\end{corollary}
+
+\begin{proof}
+The highest root is the unique maximal element of $\Phi^+$~\cite[Ch.~VI, \S1, no.~8, Prop.~25]{Bou}. If $\gamma$ has two distinct upper covers $\gamma+\alpha_s$ and $\gamma+\alpha_t$, then by Lemma~\ref{lem:sl} the root $\gamma+\alpha_s+\alpha_t$ covers both. So Lemma~\ref{lem:diamond} applies. Its $4$-cycles are exactly the squares: if $w$ covers $\gamma+\alpha_s$ and $\gamma+\alpha_t$, then $w-\gamma$ is a sum of two simple roots and also lies in $\alpha_s+\mathbb Z_{\ge0}\Delta$ and $\alpha_t+\mathbb Z_{\ge0}\Delta$, so $w=\gamma+\alpha_s+\alpha_t$.
+\end{proof}
+
+In type $B_n$, the list of covers in the proof of Lemma~\ref{lem:nonzero} shows that every square has one of the forms
+\[(e_i-e_j;\ i-1,\,j),\quad (e_i-e_n;\ i-1,\,n),\quad (e_i;\ i-1,\,n),\quad (e_i+e_j;\ i-1,\,j-1)\ \ (j-1>i),\]
+and in each, $s$ and $t$ are non-adjacent. For types $B_n$ and $C_n$ we show that the squares span the cycle space through a planar model, which we also use in Section~\ref{sec:orders}.
+
+\begin{lemma}\label{lem:grid}
+In type $B_n$, the squares span the cycle space of $\Hasse(\Phi^+)$.
+\end{lemma}
+
+\begin{proof}
+We embed $\Phi^+$ in the lattice $\mathbb Z^2$ by $e_i-e_j\mapsto(i,j)$, $e_i\mapsto(i,n+1)$ and $e_i+e_j\mapsto(i,2n+2-j)$. The image is $\Sigma_B=\{(i,p):1\le i\le n,\ i+1\le p\le 2n+1-i\}$, and each family of covers in the proof of Lemma~\ref{lem:nonzero} becomes a unit step inside $\Sigma_B$. Conversely, every unit step between two points of $\Sigma_B$ arises this way. A step $(i,p)\to(i-1,p)$ adds $\alpha_{i-1}$. A step $(i,p)\to(i,p+1)$ adds a simple root that depends only on $p$: it is $\alpha_p$ for $p<n$, $\alpha_n$ for $p\in\{n,n+1\}$, and $\alpha_{2n+1-p}$ for $p\ge n+2$.
+
+So $\Hasse(\Phi^+)$ is identified with the \emph{induced} grid graph on $\Sigma_B$, whose edges are all unit steps between points of $\Sigma_B$. A unit square of the lattice has all four corners in $\Sigma_B$ if and only if it is the image of a square of $\Phi^+$. The region $\Sigma_B$ is connected and both row-convex and column-convex.
+
+Consider the plane drawing of this graph. We claim that every bounded face is a unit square. Suppose that a bounded face $F$ contains two adjacent open unit cells. The unit segment between them is not an edge of the graph, so at least one of its endpoints $q$ is not in $\Sigma_B$. This lattice point lies on no edge, so it belongs to $F$. Since $F$ is bounded, each horizontal ray from $q$ leaves $F$, so it meets the boundary of $F$. That boundary consists of edges between points of $\Sigma_B$, and it meets the horizontal line through $q$ only at points of $\Sigma_B$. So $\Sigma_B$ contains points on both sides of $q$ in its row, and row-convexity forces $q\in\Sigma_B$, a contradiction. Hence every bounded face is a single unit cell, whose boundary is the image of a square of $\Phi^+$. For a connected plane graph, the boundaries of the bounded faces span the cycle space, which proves the lemma.
 \end{proof}
 
 \begin{proposition}\label{prop:AB}
-In types $A_n$ and $B_n$, $K_c$ is conjugate to $\Row$ for every Coxeter element $c$.
+In types $A_n$, $B_n$, $D_n$ and $E_n$, $K_c$ is conjugate to $\Row$ for every Coxeter element $c$.
 \end{proposition}
 
 \begin{proof}
-By Lemma~\ref{lem:nonzero}, $\Omega_c$ is nonzero on every cover. By the discussion after Lemma~\ref{lem:square}, every square has non-adjacent indices, so by Lemma~\ref{lem:square} every square has circulation $0$. By Lemma~\ref{lem:grid} the squares span the cycle space, so every cycle has circulation $0$, and Corollary~\ref{cor:pot} applies.
+It suffices to treat irreducible $W$. By Lemma~\ref{lem:nonzero}, $\Omega_c$ is nonzero on every cover. In types $A_n$, $D_n$ and $E_n$, no square has adjacent indices (Lemma~\ref{lem:sl}), and the squares span the cycle space (Corollary~\ref{cor:slspan}). In type $B_n$, the same holds by the list of squares above and Lemma~\ref{lem:grid}. By Lemma~\ref{lem:square} every square has circulation $0$, hence so does every cycle, and Corollary~\ref{cor:pot} applies.
 \end{proof}
 
 \section{All crystallographic types}\label{sec:all}
@@ -303,13 +352,7 @@ For every finite crystallographic Coxeter group $W$ and every Coxeter element $c
 \end{theorem}
 
 \begin{proof}
-It suffices to treat irreducible $W$. As in Proposition~\ref{prop:AB}, it suffices to show that the squares span the cycle space of $\Hasse(\Phi^+)$ and that every square has circulation $0$. Types $A_n$ and $B_n$ are Proposition~\ref{prop:AB}. Homology is taken with $\mathbb Q$ coefficients.
-
-\emph{Type $D_n$ ($n\ge4$).} Take simple roots $\alpha_k=e_k-e_{k+1}$ ($k<n$) and $\alpha_n=e_{n-1}+e_n$. The map $e_i-e_j\mapsto(i,j)$, $e_i+e_j\mapsto(i,2n-j)$ sends $\Phi^+$ onto the region
-\[\Sigma=\{(i,p):1\le i\le n-1,\ i+1\le p\le 2n-1-i\}.\]
-It is injective except that $e_i-e_n$ and $e_i+e_n$ both go to $(i,n)$. Accordingly, $\Hasse(\Phi^+)$ is the grid graph of $\Sigma$ with the column $p=n$ doubled into two columns $n^-$ and $n^+$, each joined to the columns $n-1$ and $n+1$.
-
-Let $X^\pm$ be the square complex on $\Sigma$ that uses the column $n^\pm$. Each is the induced grid complex of a row- and column-convex region, so by the argument of Lemma~\ref{lem:grid} its unit squares span its cycle space, i.e.\ $H_1(X^\pm)=0$. The unit squares of $X^\pm$ are squares of $\Phi^+$, and the $1$-skeleton of $X^-\cup X^+$ is $\Hasse(\Phi^+)$. The intersection $X^-\cap X^+$ consists of two connected, contractible pieces, $p\le n-1$ and $p\ge n+1$. By the Mayer--Vietoris sequence, $H_1(X^-\cup X^+)$ is one-dimensional, generated by a cycle through $(i,n-1),(i,n^-),(i,n+1),(i,n^+)$. This cycle is the boundary of the square $(e_i-e_{n-1};\ n-1,\,n)$. Hence the squares span the cycle space. Since $D_n$ is simply laced, Lemmas~\ref{lem:nonzero} and~\ref{lem:square} apply to every square.
+It suffices to treat irreducible $W$. Types $A_n$, $B_n$, $D_n$ and $E_n$ are Proposition~\ref{prop:AB}.
 
 \emph{Type $C_n$.} Take $\alpha_k=e_k-e_{k+1}$ ($k<n$) and $\alpha_n=2e_n$, with $(e_i,e_j)=\delta_{ij}$, so that $(\alpha_k,\alpha_{k+1})=-1$ for $k\le n-2$ and $(\alpha_{n-1},\alpha_n)=-2$. The covers are
 \[e_i-e_j\lessdot e_i-e_{j+1},\quad e_i-e_n\lessdot e_i+e_n,\quad e_i-e_j\lessdot e_{i-1}-e_j,\quad e_i+e_j\lessdot e_{i-1}+e_j,\]
@@ -323,18 +366,27 @@ Squares with non-adjacent $s,t$ are handled by Lemma~\ref{lem:square}. The squar
 \item For the two $s$-edges, $\Omega_c(\gamma,\alpha_s)$ and $\Omega_c(\gamma+\alpha_t,\alpha_s)$ both come from the single neighbour $k$, with coefficients $1$ and $2$, so they have the same sign.
 \item For the two $t$-edges, $|\Omega_c(\gamma,\alpha_t)|=2$ and $|\Omega_c(\alpha_s,\alpha_t)|=1$, so adding $\alpha_s$ to $\gamma$ does not change the sign.
 \end{itemize}
-Hence these squares also have parallel opposite edges and circulation $0$.
+Hence these squares also have parallel opposite edges and circulation $0$. So every cycle has circulation $0$, and Corollary~\ref{cor:pot} applies.
 
-\emph{Types $E_6,E_7,E_8,F_4,G_2$.} These are finitely many cases. For every ordering of $S$ we computed $w_0(c)$ and the induced orientation, and verified in exact integer arithmetic that it admits a potential. There are $720$, $5040$, $40320$, $24$ and $2$ orderings respectively, and every one admits a potential. This suffices by Corollary~\ref{cor:pot}. As an independent check, we computed the rank of the square cycles modulo the prime $2^{31}-1$. Full rank modulo a prime implies full rank over $\mathbb Q$, so this confirms that in these types too the squares span the cycle space. We also checked that every square has parallel opposite edges.
+\emph{Type $G_2$.} With $\alpha_1$ short, the positive roots are $\alpha_1$, $\alpha_2$, $\alpha_1+\alpha_2$, $2\alpha_1+\alpha_2$, $3\alpha_1+\alpha_2$ and $3\alpha_1+2\alpha_2$. Both simple roots are covered by $\alpha_1+\alpha_2$, and the four non-simple roots form the chain $\alpha_1+\alpha_2\lessdot2\alpha_1+\alpha_2\lessdot3\alpha_1+\alpha_2\lessdot3\alpha_1+2\alpha_2$, so the Hasse diagram is a tree. It has no cycles, so Corollary~\ref{cor:pot} applies to every toggle order.
+
+\emph{Type $F_4$.} Number the simple roots as in~\cite[Plate~VIII]{Bou}, so that $\alpha_1,\alpha_2$ are long and $\alpha_3,\alpha_4$ are short, and normalise $(\alpha_1,\alpha_1)=2$ and $(\alpha_3,\alpha_3)=1$. Then $(\alpha_1,\alpha_2)=(\alpha_2,\alpha_3)=-1$ and $(\alpha_3,\alpha_4)=-\tfrac12$. We write roots by their coordinates, so $1221=\alpha_1+2\alpha_2+2\alpha_3+\alpha_4$. The $24$ positive roots are listed in~\cite[Plate~VIII]{Bou}, and everything below can be checked by hand from that list.
+
+First, $\Omega_c$ is nonzero on every cover $\gamma\lessdot\gamma+\alpha_s$. Some neighbour $t$ of $s$ has $\gamma_t\neq0$: the support of the root $\gamma+\alpha_s$ is connected and contains $s$, so if no neighbour of $s$ were in the support of $\gamma$, then $\gamma$, and hence $\gamma+\alpha_s$, would be a multiple of $\alpha_s$. For $s=1$ or $s=4$ there is only one neighbour, so~\eqref{eq:omega} has a single nonzero term. For $s=2$: since $\alpha_2$ is long, $\alpha_2$-strings have length at most $2$, so $\gamma-\alpha_2\notin\Phi$ and $(\gamma,\alpha_2)=\langle\gamma,\alpha_2^\vee\rangle=-1$, that is, $\gamma_1+\gamma_3=2\gamma_2+1$; so $\gamma_1\neq\gamma_3$, and the terms $\pm\gamma_1$ and $\pm\gamma_3$ cannot cancel. For $s=3$, the terms are $\pm\gamma_2$ and $\pm\tfrac12\gamma_4$, and the ten covers $\gamma\lessdot\gamma+\alpha_3$, with $\gamma=0001,0100,0110,1100,0111,1110,1111,1221,1222,1232$, all have $\gamma_4\neq2\gamma_2$. So Lemma~\ref{lem:rule} applies.
+
+Second, the squares span the cycle space. The roots with more than one upper cover are $0010$, $0100$, $0110$, $0111$, $0120$, $1110$, $0121$, $1120$, $1121$ and $1221$, and in each case $\gamma+\alpha_s+\alpha_t$ is a root for every two upper covers $\gamma+\alpha_s$, $\gamma+\alpha_t$. The highest root $2342$ is the unique maximal element, so Lemma~\ref{lem:diamond} applies, and as in Corollary~\ref{cor:slspan} its $4$-cycles are the squares.
+
+Third, every square has circulation $0$. Squares with non-adjacent indices are handled by Lemma~\ref{lem:square}. The squares with adjacent indices are $(\gamma;\,3,4)$ for $\gamma=0110$, $1110$ and $1221$. The two $4$-edges get their $\Omega_c$-values only from the neighbour $3$, with coefficients $\gamma_3$ and $\gamma_3+1$, so they have the same sign. For the two $3$-edges, $|\Omega_c(\gamma,\alpha_3)|\ge1$ (it is $1$ for $0110$ and $1110$, and $\tfrac32$ or $\tfrac52$ for $1221$), while $|\Omega_c(\alpha_4,\alpha_3)|=\tfrac12$, so adding $\alpha_4$ to $\gamma$ does not change the sign. As in type $C_n$, opposite edges are parallel, every cycle has circulation $0$, and Corollary~\ref{cor:pot} applies.
 \end{proof}
 
-\begin{remark}\label{rem:other}
-Independently of the proofs above, the existence of a potential was verified by computer for every ordering of $S$ in types $A_n$ ($n\le9$) and $B_n$, $C_n$, $D_n$ ($n\le8$).
+\begin{remark}[Independent computational checks]\label{rem:other}
+The following computations are not used in the proofs above; they confirm them independently. For every ordering of $S$ in types $E_6$, $E_7$, $E_8$, $F_4$ and $G_2$ ($720$, $5040$, $40320$, $24$ and $2$ orderings), the orientation induced by $w_0(c)$ admits a potential, and the same holds in types $A_n$ ($n\le9$) and $B_n$, $C_n$, $D_n$ ($n\le8$). In types $E$, $F$ and $G$ the square cycles have full rank modulo the prime $2^{31}-1$, hence over $\mathbb Q$, and every square has parallel opposite edges. In type $F_4$, $\Omega_c$ is nonzero on every cover for all $24$ orderings. The hypothesis of Lemma~\ref{lem:diamond} holds in every crystallographic type we tested, including the non-simply-laced ones.
 \end{remark}
 
-\begin{remark}\label{rem:comb}
-Combining Theorem~\ref{thm:thomas} with the theorem of Armstrong, Stump and Thomas~\cite[Thm.~1.2]{AST}, the combinatorial map $\mathrm{Krew}_c$ has order $h$ if $w_0=-1$ and $2h$ otherwise, for every finite Weyl group and every Coxeter element $c$. This extends~\cite[Cor.~1.6]{DFISTW} beyond type $A$. Moreover $\mathrm{Krew}_c$ has the same orbit structure as rowmotion, hence as the Kreweras complement on noncrossing partitions~\cite{AST}, so an equivariant bijection between the two actions exists in every type.
-\end{remark}
+\subsection*{Proof of Corollary~\ref{cor:krew}}
+By Theorem~\ref{thm:thomas} and Corollary~\ref{cor:pot} (which applies verbatim to combinatorial toggles), $\mathrm{Krew}_c=\pi\circ\Row\circ\pi^{-1}$, where $\pi=t_{x_k}\cdots t_{x_1}$ is a product of toggles computed from a potential of the $w_0(c)$ orientation. So $\pi$ is a bijection on order ideals that carries $\Row$ to $\mathrm{Krew}_c$, and the two maps have the same orbit structure. The map $I$ sending an antichain to the order ideal it generates carries rowmotion on antichains, which is Panyushev's map $\mathsf{Pan}$, to $\Row$~\cite{CFF}. For a bipartite Coxeter element $c'$, the Main Theorem of Armstrong, Stump and Thomas~\cite[\S1.3]{AST} gives an explicit bijection $\alpha$ from antichains to $NC(W,c')$ with $\alpha\circ\mathsf{Pan}=\mathsf{Krew}\circ\alpha$, where $\mathsf{Krew}(w)=c'w^{-1}$. Then $\pi\circ I\circ\alpha^{-1}$ carries $\mathsf{Krew}$ to $\mathrm{Krew}_c$. Conjugation $w\mapsto xwx^{-1}$ carries $NC(W,c')$ with its Kreweras complement to $NC(W,xc'x^{-1})$, and all Coxeter elements are conjugate, so any Coxeter element may be used in place of $c'$.
+
+For the order: Armstrong, Stump and Thomas~\cite[Thm.~1.2]{AST} proved that $\mathsf{Pan}^{2h}=\mathrm{id}$ and that $\mathsf{Pan}^h$ is the involution induced by $-w_0$, which is the identity exactly when $w_0=-1$. Panyushev observed that the rank levels of $\Phi^+$, together with the empty antichain, form an orbit of size $h$ (see~\cite[\S1.3]{AST}). So the order of $\mathsf{Pan}$, and hence of $\mathrm{Krew}_c$, is $h$ if $w_0=-1$ and $2h$ otherwise.
 
 \section{The noncrystallographic types}\label{sec:H3}
 
@@ -393,18 +445,22 @@ The conjugacy of products of involutions whose orders differ by source-to-sink m
 \end{remark}
 
 \begin{remark}[Open questions]
-(1) Our proof in types $E$, $F$, $G$ and $H_3$ is computational. A uniform argument would be desirable, for instance one that extends the square analysis of Section~\ref{sec:squares} to the exceptional root posets and to Armstrong's noncrystallographic posets. (2) In type $H_3$, $K_c$ depends on the chosen labelling of the root poset by roots. It would be interesting to know which labellings give a map conjugate to rowmotion.
+(1) Our proof is computational only in type $H_3$. A conceptual treatment of Armstrong's noncrystallographic root posets would be desirable. (2) In type $H_3$, $K_c$ depends on the chosen labelling of the root poset by roots. It would be interesting to know which labellings give a map conjugate to rowmotion. (3) Corollary~\ref{cor:krew} gives an equivariant bijection between noncrossing and nonnesting partitions in every type, but an indirect one. A direct construction in every type, extending the bijections of~\cite{DFISTW} in types $A$ and $C$, would be desirable.
 \end{remark}
 
 \section*{Code}
-All computations are in the ancillary files of this arXiv submission (Python and C++). The file \texttt{anc/README.md} lists, for each computational claim in the paper, the file, the command and the expected output. The files cover:
+All computations are in the folder \texttt{anc/} that accompanies this paper (Python and C++). It is also available at \url{https://doi.org/10.5281/zenodo.23602944} and \url{https://github.com/samsonmaximus/toggle-w0c-rowmotion}. The proofs use computation only in type $H_3$ (Section~\ref{sec:H3}). The other computations, described in Remark~\ref{rem:other} and Sections~\ref{sec:H3} and~\ref{sec:orders}, are independent checks. The file \texttt{anc/README.md} lists, for each computational claim in the paper, the file, the command and the expected output. The files cover:
 \begin{itemize}
 \item the root posets, $c$-sorting words and orientations (\texttt{roots.py}, \texttt{orient.py});
 \item the exact potential and square checks (\texttt{fastcheck.cpp}, \texttt{squares.cpp}, \texttt{omega.cpp});
+\item the check of the hypothesis of Lemma~\ref{lem:diamond} and of the span of the squares (\texttt{diamond.py});
 \item the $H_3$ conjugacy check (\texttt{h3run.py});
 \item the $H_3$ certificate (\texttt{h3\_sym\_half.py}, with its run log);
 \item the floating-point sanity checks (\texttt{roworder.py}, \texttt{i2m.py}).
 \end{itemize}
+
+\section*{Acknowledgements}
+I thank Hugh Thomas for reading an earlier version of this paper. He pointed out that in type $E$ the square argument makes a computer search over Coxeter elements unnecessary, which led to the proof in Section~\ref{sec:squares}, and he suggested giving more prominence to the result now stated as Corollary~\ref{cor:krew}.
 
 \section*{Use of AI}
 I used Claude Opus 5.5 (Anthropic) throughout this project: to search the literature, to develop and test the arguments, to write and run the code, and to draft the text. I then had every part checked by separate Claude sessions acting as referees. They re-derived each proof, compared each cited statement with its source, and recomputed the computational claims, in part with code written from scratch. Their reports led to corrections that are included here. These checks were made with the same AI system and do not replace expert refereeing. Every computational claim can be reproduced from the ancillary files. The one statement that rests on a long computation, $\Row^{10}=\mathrm{id}$ in type $H_3$, is certified by an exact symbolic calculation, not a numerical one. I have read the final manuscript and take full responsibility for its contents; any remaining errors are mine.
@@ -412,6 +468,7 @@ I used Claude Opus 5.5 (Anthropic) throughout this project: to search the litera
 \begin{thebibliography}{99}
 \bibitem{Arm} D.~Armstrong, Generalized noncrossing partitions and combinatorics of Coxeter groups, Mem.\ Amer.\ Math.\ Soc.\ 202 (2009), no.~949.
 \bibitem{AST} D.~Armstrong, C.~Stump, H.~Thomas, A uniform bijection between nonnesting and noncrossing partitions, Trans.\ Amer.\ Math.\ Soc.\ 365 (2013), 4121--4151; arXiv:1101.1277.
+\bibitem{Bou} N.~Bourbaki, Lie Groups and Lie Algebras, Chapters 4--6, Springer, Berlin, 2002.
 \bibitem{BS} A.~E.~Brouwer, A.~Schrijver, On the period of an operator, defined on antichains, Math.\ Centrum report ZW 24/74, Amsterdam, 1974.
 \bibitem{CFF} P.~J.~Cameron, D.~G.~Fon-Der-Flaass, Orbits of antichains revisited, European J.\ Combin.\ 16 (1995), 545--554.
 \bibitem{CS} M.~Cuntz, C.~Stump, On root posets for noncrystallographic root systems, Math.\ Comp.\ 84 (2015), 485--503; arXiv:1212.2876.

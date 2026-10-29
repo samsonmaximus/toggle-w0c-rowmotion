@@ -6,6 +6,7 @@ authors:
   - family-names: Fraser
     given-names: Samson
     email: samsonmfraser@gmail.com
+    orcid: "https://orcid.org/0009-0004-7671-9756"
 license: CC-BY-4.0
 date-released: 2026-10-23
 keywords:
@@ -17,5 +18,6 @@ keywords:
   - Kreweras complement
   - Coxeter groups
   - root posets
-# After the Zenodo record is published, uncomment and fill in the concept DOI:
-# doi: 10.5281/zenodo.XXXXXXX
+doi: 10.5281/zenodo.23602944
+url: "https://doi.org/10.5281/zenodo.23602944"
+repository-code: "https://github.com/samsonmaximus/toggle-w0c-rowmotion"
